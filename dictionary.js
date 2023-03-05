@@ -1,4 +1,4 @@
-const dictionary[];
+const dictionary = [];
 function data_base_dictionary() {
     let word = document.getElementById("word_input").value;
     dictionary.push(word);

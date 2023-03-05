@@ -1,4 +1,4 @@
-var dictionary = [200000], position = 0;
+var dictionary = [200000], position = 1;
 function data_base_dictionary() {
     let word = document.getElementById("word_input").value;
     dictionary[position] = word;
@@ -9,6 +9,15 @@ function data_base_dictionary() {
 
 function searchWord() {
     let word = document.getElementById("search_Word").value;
-     let exist = dictionary.includes(word) ? alert("The word is here :" + " " + word): alert("The word is not in the dictionary!" + " " + ":(");
-     document.getElementById("demo").textContent = exist;   
+    let x = 0, poz = position;
+     while(poz >= 1){
+        if(dictionary[poz] == word){
+            alert("Here is the word : " + word);
+            ++x;
+        }
+        --poz;
+     }
+     if(x == 0){
+        alert("The word is not in dictionary "  + " :(");
+     } 
 }

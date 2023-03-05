@@ -1,6 +1,6 @@
 const dictionary[];
 function data_base_dictionary() {
-    const word = document.getElementById("word_input").value;
+    let word = document.getElementById("word_input").value;
     dictionary.push(word);
     console.log(dictionary);
     document.getElementById("word_input").value =" ";

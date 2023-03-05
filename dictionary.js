@@ -1,7 +1,8 @@
-const dictionary = [];
+var dictionary = [200000], position = 0;
 function data_base_dictionary() {
     let word = document.getElementById("word_input").value;
-    dictionary.push(word);
+    dictionary[position] = word;
+    ++position;
     console.log(dictionary);
     document.getElementById("word_input").value =" ";
 }
